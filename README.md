@@ -5,10 +5,12 @@ This repository contains two VScripts that were made for the [Left 4 Invasion: O
 - Drag and drop the `scripts` folder in your `left4dead2` folder
 
 # Hammer Editor Example
-![Hammer-Editor-Code-Example](https://user-images.githubusercontent.com/26851418/233125784-e21f84ca-e81e-4e72-95eb-745148326c48.jpg)
+![Hammer-Editor-Code-Example](https://user-images.githubusercontent.com/26851418/233135930-70d609ad-14bd-42d2-ab43-ca255ac84541.jpg)
 
 # Stripper: Source Example
-If you're running a SourceMod server, you'll need to download [Stripper: Source](https://www.bailopan.net/stripper/). You can add the following code to the `global_filters.cfg` file if you wish to have this code apply to all maps. If you want to add it for a specific map only, you can create `<mapname>.cfg` (e.g. `c8m1_apartment.cfg`) and add the following code:
+If you're running a SourceMod server, you'll need to download [Stripper: Source](https://www.bailopan.net/stripper/). 
+
+You can add the following code to the `global_filters.cfg` file if you wish to have this code apply to all maps. If you want to add it for a specific map only, you can create `<mapname>.cfg` (e.g. `c8m1_apartment.cfg`) and add the following code:
 ```
 add:
 {
@@ -17,6 +19,11 @@ add:
 "classname" "logic_auto"
 "OnMapSpawn" "info_directorRunScriptCodeg_ModeScript.DisableBossMusic()0-1"
 }
+```
+
+If you like to run the cutscene script, simply append by adding the following code after the `OnMapSpawn` output on the next line:
+```
+"OnMapSpawn" "info_directorBeginScriptl4invasion_cutscene0-1"
 ```
 
 # Docs
